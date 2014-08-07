@@ -17,22 +17,159 @@
     <link href="css/prettyPhoto.css" rel="stylesheet">
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <link href="css/bootstrap-theme1.min.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Neucha' rel='stylesheet' type='text/css'>
 		<!--[if lt IE 9]>
 		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
   </head>
 
   <body>
+
+    <style media="screen">
+      
+        
+        * {
+            -webkit-box-sizing:border-box;
+            -moz-box-sizing:border-box;
+            -ms-box-sizing:border-box;
+            box-sizing:border-box;
+        }
+        html {
+            height:100%;
+        }
+        
+     
+          
+         .post-it-note,
+         .polaroid {
+            position: absolute;
+            box-shadow: 3px 3px 2px rgba(0,0,0,.4);
+         }
+
+         .post-it-note {
+            width:250px;
+             height:250px;
+             padding:20px;
+             font-family:'Neucha', serif;
+             background-color:#e8dd62;
+             background: -webkit-linear-gradient(135deg, #4d4f51 0%, #4d4f51 70%, #4d4f51 100%); /* Safari/Chrome */
+             background: -moz-linear-gradient(135deg, #4d4f51 0%, #4d4f51 70%, #4d4f51 100%); /*  Old Firefox */
+             background: -o-linear-gradient(135deg, #4d4f51 0%, #4d4f51 70%, #4d4f51 100%); /* Opera */
+             background: -ms-linear-gradient(135deg, #4d4f51 0%, #4d4f51 70%, #4d4f51 100%); /* IE 9 */
+             background: linear-gradient(135deg, #4d4f51 0%, #4d4f51 70%, #4d4f51 100%);
+         }
+         /* Colour classes for the post it notes */
+         .yellow {
+            background-color:#e8dd62;
+             background: -webkit-linear-gradient(135deg, #4d4f51 0%, #4d4f51 70%, #4d4f51 100%); /* Safari/Chrome */
+             background: -moz-linear-gradient(135deg, #4d4f51 0%, #4d4f51 70%, #4d4f51 100%); /* Old Firefox */
+             background: -o-linear-gradient(135deg, #4d4f51 0%, #4d4f51 70%, #4d4f51 100%); /* Opera */
+             background: -ms-linear-gradient(135deg, #4d4f51 0%, #4d4f51 70%, #4d4f51 100%); /* IE 9 */
+             background: linear-gradient(135deg, #4d4f51 0%, #4d4f51 70%, #4d4f51 100%); 
+         }
+         .red {
+            background-color:#d23838;
+             background: -webkit-linear-gradient(135deg, #d73333 0%, #d73333 70%, #ee5050 100%); /* Safari/Chrome */
+             background: -moz-linear-gradient(135deg, #d73333 0%, #d73333 70%, #ee5050 100%); /* Old Firefox */
+             background: -o-linear-gradient(135deg, #d73333 0%, #d73333 70%, #ee5050 100%); /* Opera */
+             background: -ms-linear-gradient(135deg, #d73333 0%, #d73333 70%, #ee5050 100%); /* IE 9 */
+             background: linear-gradient(135deg, #d73333 0%, #d73333 70%, #ee5050 100%); 
+         }
+         .blue {
+            background-color:#5c97ee;
+             background: -webkit-linear-gradient(135deg, #608cce 0%, #608cce 70%, #77a0de 100%); /* Safari/Chrome */
+             background: -moz-linear-gradient(135deg, #608cce 0%, #608cce 70%, #77a0de 100%); /*  Old Firefox */
+             background: -o-linear-gradient(135deg, #608cce 0%, #608cce 70%, #77a0de 100%); /* Opera */
+             background: -ms-linear-gradient(135deg, #608cce 0%, #608cce 70%, #77a0de 100%); /*  IE 9 */
+             background: linear-gradient(135deg, #608cce 0%, #608cce 70%, #77a0de 100%); 
+         }
+
+        /* Font styling for headings and text inside the post it notes */
+         p, h1, h2, h3, h4, h5 {
+            margin-top:0;
+         }
+         h1 {
+            font-size:20px;
+         }
+         p {
+            font-size: 16px;
+         }
+
+         .pin {
+            width:20px;
+             height:20px;
+             position: absolute;
+             top:10px;
+             left:10px;
+             -webkit-box-shadow: 2px 2px 2px rgba(0,0,0,.3); /* Make it work in Safari/Chrome */
+             box-shadow: 2px 2px 2px rgba(0,0,0,.3);
+             border-radius: 20px;
+         }
+         
+       
+         #note-1 {
+            top:2%;
+            left:5%;
+         }
+         #note-2 {
+            top: 20%;
+            right:2%;
+         }
+         #note-3 {
+            bottom: 10%;
+            left: 16%;
+            transform:rotate(2deg);
+            -ms-transform:rotate(2deg); /* Make it work in IE 9 */
+            -webkit-transform:rotate(2deg); /* Make it work in Safari and Chrome */
+         }
+         #picture-1 {
+            left: 3%;
+            top: 30%;
+            transform:rotate(2deg);
+            -ms-transform:rotate(2deg); /* Make it work in IE 9 */
+            -webkit-transform:rotate(2deg); /*  Make it work in Safari */
+         }
+
+
+         #picture-2 {
+            bottom: 10%;
+            right:10%;
+            transform:rotate(-3deg);
+            -ms-transform:rotate(-3deg); /* Make it work in IE 9 */
+            -webkit-transform:rotate(-3deg); /* Make it work in Safari and Chrome */
+         }
+  h1.note{
+  	font-size: 20px;
+  	color: white;
+  }
+  h2.note{
+  	color: white;
+  }
+  
+  p.content{
+  	color:white;
+  }
+    </style>
   <div id="boxWrapp">
     
     <!-- Full Page Image Header Area -->
     <div id="about" class="header">
 	<div class="maskHeader"></div>
+        <div class="post-it-note yellow" id="note-1">
+             <div class="pin blue"></div>
+            
+          <h1 class="note"><br/> <b>Feet-O-Mania Auditions<b></h1>
+          <p class="content">Solos and Groups!<br/>Where: City Center<br/>
+            When: 12-08-14<br/>For further details contact<br/>Shravya:9494541029<br/></p><br/>
+            <h2 class="note">See you All. B-)</h2>
+                    </div>
+
      	<div class="vert-text">
 			<h1>Sreevision-14</h1>
 			<h2>Engineering Technocrats</h2>
 			
 		</div>
+
     <div class="navbar-nav">
     <a href="#aboutMore" class="btn btn-link btnAbout"><i class="fa fa-angle-down fa-2x"></i></a>
     </div>
@@ -132,8 +269,8 @@
 				<div class="portfolio-item ">
 					<div class="thumbnail">
 					   <div class="thumb-img">
-					   <a href="img/portfolio/p01-large.jpg" data-gal="prettyPhoto[gallery2]" title="This Is Image Title">
-						<img class="linear img-portfolio img-responsive" src="img/portfolio/p01-large.jpg" alt="This Is Image">
+					   <a href="img/portfolio/p01-large.jpg" data-gal="prettyPhoto[gallery2]"  title="Hello world">
+						<img class="linear img-portfolio img-responsive" src="img/portfolio/p01-large.jpg" alt="Contact for futher details.">
 					   </a>
 					   
 					   <div class="folio-caption animated">
@@ -294,7 +431,7 @@
 					<div class="portfolio-item">
 						<div class="thumbnail">
 						<div class="thumb-img">
-						<a href="img/portfolio/p09-large.jpg" data-gal="prettyPhoto[gallery2]" title="This Is Image Title"><img class="linear img-portfolio img-responsive" src="img/portfolio/robo-soccer.jpg" alt="This Is Image"></a>
+						<a href="img/portfolio/robo-soccer.jpg" data-gal="prettyPhoto[gallery2]" title="This Is Image Title"><img class="linear img-portfolio img-responsive" src="img/portfolio/robo-soccer.jpg" alt="This Is Image"></a>
 						<div class="link"><a href="#">This Is Folio Link6</a></div>
 						<div class="folio-caption">
 					       <p>Robo-Soccer</p>
@@ -310,7 +447,7 @@
 					<div class="portfolio-item">
 						<div class="thumbnail">
 						<div class="thumb-img">
-						<a href="img/portfolio/p09-large.jpg" data-gal="prettyPhoto[gallery2]" title="This Is Image Title"><img class="linear img-portfolio img-responsive" src="img/portfolio/robo-race.jpg" alt="This Is Image"></a>
+						<a href="img/portfolio/robo-race.jpg" data-gal="prettyPhoto[gallery2]" title="This Is Image Title"><img class="linear img-portfolio img-responsive" src="img/portfolio/robo-race.jpg" alt="This Is Image"></a>
 						<div class="link"><a href="#">This Is Folio Link6</a></div>
 						<div class="folio-caption">
 					       <p>Robo-Race</p>
@@ -326,7 +463,7 @@
 					<div class="portfolio-item">
 						<div class="thumbnail">
 						<div class="thumb-img">
-						<a href="img/portfolio/p09-large.jpg" data-gal="prettyPhoto[gallery2]" title="This Is Image Title"><img class="linear img-portfolio img-responsive" src="img/portfolio/line-follower.jpg" alt="This Is Image"></a>
+						<a href="img/portfolio/line-follower.jpg" data-gal="prettyPhoto[gallery2]" title="This Is Image Title"><img class="linear img-portfolio img-responsive" src="img/portfolio/line-follower.jpg" alt="This Is Image"></a>
 						<div class="link"><a href="#">This Is Folio Link6</a></div>
 						<div class="folio-caption">
 					       <p>Line follower</p>
@@ -342,7 +479,7 @@
 					<div class="portfolio-item">
 						<div class="thumbnail">
 						<div class="thumb-img">
-						<a href="img/portfolio/p02-large.jpg" data-gal="prettyPhoto[gallery2]" title="This Is Image Title"><img class="linear img-portfolio img-responsive" src="img/portfolio/dance.jpeg" alt="This Is Image"></a>
+						<a href="img/portfolio/dance.jpeg" data-gal="prettyPhoto[gallery2]" title="This Is Image Title"><img class="linear img-portfolio img-responsive" src="img/portfolio/dance.jpeg" alt="This Is Image"></a>
 						 <div class="link"><a href="#">This Is Folio Link2</a></div>
 						<div class="folio-caption">
 					       <p>Feet-O-Mania</p>
@@ -357,7 +494,7 @@
 					<div class="portfolio-item">
 						<div class="thumbnail">
 						<div class="thumb-img">
-						<a href="img/portfolio/p02-large.jpg" data-gal="prettyPhoto[gallery2]" title="This Is Image Title"><img class="linear img-portfolio img-responsive" src="img/portfolio/arjit.jpg" alt="This Is Image"></a>
+						<a href="img/portfolio/arjit.jpg" data-gal="prettyPhoto[gallery2]" title="This Is Image Title"><img class="linear img-portfolio img-responsive" src="img/portfolio/arjit.jpg" alt="This Is Image"></a>
 						 <div class="link"><a href="#">This Is Folio Link2</a></div>
 						<div class="folio-caption">
 					       <p>Spiccato</p>
@@ -372,7 +509,7 @@
 					<div class="portfolio-item">
 						<div class="thumbnail">
 						<div class="thumb-img">
-						<a href="img/portfolio/p02-large.jpg" data-gal="prettyPhoto[gallery2]" title="This Is Image Title"><img class="linear img-portfolio img-responsive" src="img/portfolio/lan.jpg" alt="This Is Image"></a>
+						<a href="img/portfolio/lan.jpg" data-gal="prettyPhoto[gallery2]" title="This Is Image Title"><img class="linear img-portfolio img-responsive" src="img/portfolio/lan.jpg" alt="This Is Image"></a>
 						 <div class="link"><a href="#">This Is Folio Link2</a></div>
 						<div class="folio-caption">
 					       <p>Lan Gaming</p>
@@ -387,7 +524,7 @@
 					<div class="portfolio-item">
 						<div class="thumbnail">
 						<div class="thumb-img">
-						<a href="img/portfolio/p02-large.jpg" data-gal="prettyPhoto[gallery2]" title="This Is Image Title"><img class="linear img-portfolio img-responsive" src="img/portfolio/camera.jpg" alt="This Is Image"></a>
+						<a href="img/portfolio/camera.jpg" data-gal="prettyPhoto[gallery2]" title="This Is Image Title"><img class="linear img-portfolio img-responsive" src="img/portfolio/camera.jpg" alt="This Is Image"></a>
 						 <div class="link"><a href="#">This Is Folio Link2</a></div>
 						<div class="folio-caption">
 					       <p>Photography Contest</p>
@@ -402,7 +539,8 @@
 					<div class="portfolio-item">
 						<div class="thumbnail">
 						<div class="thumb-img">
-						<a href="img/portfolio/p02-large.jpg" data-gal="prettyPhoto[gallery2]" title="This Is Image Title"><img class="linear img-portfolio img-responsive" src="img/portfolio/film.jpg" alt="This Is Image"></a>
+						<a href="img/portfolio/film.jpg" data-gal="prettyPhoto[gallery2]" title="This Is Image Title">
+							<img class="linear img-portfolio img-responsive" src="img/portfolio/film.jpg" alt="This Is Image"></a>
 						 <div class="link"><a href="#">This Is Folio Link2</a></div>
 						<div class="folio-caption">
 					       <p>Short Film</p>
@@ -785,8 +923,11 @@
 			<li><a href="https://www.twitter.com/sreevision" class="socIcon" target="_blank" data-toggle="tooltip" title="Twitter" data-original-title="Twitter" data-gal='tooltip' data-placement="top"><i class="fa fa-twitter fa-2x"></i></a></li>
 			
 			</ul>
+
 			</div>
+
 			</div>
+			<p>-by Santosh Viswanatham|@santoshv225</p>
         </div>
       </div>
     </footer>
